@@ -1,4 +1,4 @@
-* {
+/* * {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -45,4 +45,80 @@ select {
 	appearance: none !important;
 	-webkit-appearance: none !important;
 	border-radius: 0;
+} */
+
+#root {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
 }
+
+div {
+	margin: 10px;
+}
+
+label {
+	display: block;
+}
+
+form {
+	border: 2px solid;
+	padding: 10px;
+
+	color: #ea1d6f;
+	flex: 0 1 300px;
+	margin: auto;
+	padding: 10px;
+	background: #3e3e3e;
+	border-radius: 15px;
+}
+
+button {
+	margin: 0;
+	position: absolute;
+	left: 50%;
+
+	transform: translateX(-50%);
+}
+
+body {
+	background: linear-gradient(to right, #ea1d6f 0%, #eb466b 100%);
+	font-size: 12px;
+}
+
+body,
+button,
+input,
+select {
+	font-family: "Montserrat", sans-serif;
+	font-weight: 700;
+	letter-spacing: 1.4px;
+}
+
+input,
+select {
+	color: #ddd;
+	width: 100%;
+	padding: 10px 0;
+	background: none;
+	border: none;
+	border-bottom: 1px solid #666;
+	color: #ddd;
+	font-size: 10px;
+	text-transform: uppercase;
+	outline: none;
+}
+
+button:hover {
+	color: #b9134f;
+	background-color: #3e3e3e;
+}
+
+/*  1. kellő távolság legyen a beviteli mezők között 1. kellő távolság legyen a
+beviteli mezők között és a mezőkben 2. elég nagy legyen az input mező 3. label
+ne legyen egy sorban az inputtal 4. label és az input össze legyen kötve (lást
+label for="") 5. minden képernyőméreten ugyanúgy használható legyen 6.rendezett
+legyen legyen egy vonalban 7. lehessen tabolni (ha formban van benne akkor
+lehet) 8. logikus sorrend legyen 9. aktuális input mező kiemelkedjen 10. gomb
+legyen hangsúlyos 11. legyen megn 12.kontraszt  13. font használat 14. középre rendezve */

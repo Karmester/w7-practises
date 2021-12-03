@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* * {
 	margin: 0;
 	padding: 0;
@@ -46,73 +47,80 @@ select {
 	-webkit-appearance: none !important;
 	border-radius: 0;
 } */
-
 #root {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
 }
 
 div {
-	margin: 10px;
+  margin: 10px;
 }
 
 label {
-	display: block;
+  display: block;
 }
 
 form {
-	border: 2px solid;
-	padding: 10px;
-
-	color: #ea1d6f;
-	flex: 0 1 300px;
-	margin: auto;
-	padding: 10px;
-	background: #3e3e3e;
-	border-radius: 15px;
+  border: 2px solid;
+  padding: 10px;
+  color: #ea1d6f;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 300px;
+          flex: 0 1 300px;
+  margin: auto;
+  padding: 10px;
+  background: #3e3e3e;
+  border-radius: 15px;
 }
 
 button {
-	margin: 0;
-	position: relative;
-	left: 50%;
-
-	transform: translateX(-50%);
+  margin: 0;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 body {
-	background: linear-gradient(to right, #ea1d6f 0%, #ec8ca1 100%);
-	font-size: 12px;
+  background: -webkit-gradient(linear, left top, right top, from(#ea1d6f), to(#ec8ca1));
+  background: linear-gradient(to right, #ea1d6f 0%, #ec8ca1 100%);
+  font-size: 12px;
 }
 
 body,
 button,
 input,
 select {
-	font-family: "Montserrat", sans-serif;
-	font-weight: 700;
-	letter-spacing: 1.4px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  letter-spacing: 1.4px;
 }
 
 input,
 select {
-	color: #ddd;
-	width: 100%;
-	padding: 10px 0;
-	background: none;
-	border: none;
-	border-bottom: 1px solid #666;
-	color: #ddd;
-	font-size: 10px;
-	text-transform: uppercase;
-	outline: none;
+  color: #ddd;
+  width: 100%;
+  padding: 10px 0;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #666;
+  color: #ddd;
+  font-size: 10px;
+  text-transform: uppercase;
+  outline: none;
 }
 
 button:hover {
-	color: #b9134f;
-	background-color: #3e3e3e;
+  color: #b9134f;
+  background-color: #3e3e3e;
 }
 
 /*  1. kellő távolság legyen a beviteli mezők között 1. kellő távolság legyen a
@@ -122,3 +130,40 @@ label for="") 5. minden képernyőméreten ugyanúgy használható legyen 6.rend
 legyen legyen egy vonalban 7. lehessen tabolni (ha formban van benne akkor
 lehet) 8. logikus sorrend legyen 9. aktuális input mező kiemelkedjen 10. gomb
 legyen hangsúlyos 11. legyen megn 12.kontraszt  13. font használat 14. középre rendezve */
+#form div.file {
+  position: relative;
+  height: 80px;
+  background-color: #ddd;
+}
+
+#form div.file::after {
+  content: "Kattints vagy húzd ide a fájlodat";
+  font-weight: 300;
+  display: block;
+  text-align: center;
+}
+
+#form div.file label {
+  display: block;
+  text-align: center;
+  padding-top: 20px;
+}
+
+#form div.file input[type="file"] {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  opacity: 0;
+  cursor: pointer;
+}
+
+#inputValue img {
+  width: 200px;
+  height: 200px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+/*# sourceMappingURL=style.css.map */
